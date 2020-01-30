@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Products</h2>
+
+<table style="width:100%">
+  <tr>
+    {% for header in fieldnames %}
+    <th>
+    {{ header }}
+    </th>
+    {% endfor %}
+  </tr>
+  <tr>
+    {% for row in file %}
+    <td>
+      {{ row.id }}
+    </td>
+    <td>
+      <a href ={{url_for('show_product', id=row['id']) }}>
+      {{ row.product_name }}</a>
+    </td>
+    <td>
+      {{ row.product_description }}
+    </td>
+    <td>
+      {{ row.price }}
+    </td>
+    <td>
+      {{ row.currency }}
+    </td>
+    <td>
+      {{ row.available_units }}
+    </td>
+  </tr>
+   {% endfor %}
+
+</table>
+{% endblock %}

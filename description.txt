@@ -1,0 +1,32 @@
+Using Bootstrap 4 CSS Framework, create a website that has the following features:
+
+
+- All pages have a navigation bar with the menu that contains:
+    - Home
+    - Products
+    - Our stores
+
+
+- Home page is the route on "/"
+    - Displays the menu on the upper side
+    - Then, has a list of paragraphs with Lorem Ipsum text (4,5 paragraphs or how many it takes to fill the page to bottom
+
+
+- Products page is the route on "/products"
+    - On this route, it also displays the top menu bar
+    - In a table, it displays some products, that are read from the products.csv file
+    - On each product name, there's a href, that, when clicked, takes the user to the product/<id> page
+
+
+- Product page is the route on "/products/<id>"
+    - loads the product, from the file, based on the id
+    - The page has a form
+        - The form has a input field for quantity and a button
+        - The button is named "order now"
+        - When the button is pressed, you append to the file "orders.csv"
+            - in the following format:
+                - product_id,quantity,total_price
+
+
+- There's also another route, "/admin", which is not displayed in the upper menu
+    - When the user goes to "/admin" - it displays the orders from the orders.csv, within a table.
